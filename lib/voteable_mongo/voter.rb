@@ -8,7 +8,6 @@ module Mongo
       scope :voted_for, lambda { |votee| where(:_id => { '$in' =>  votee.voter_ids }) }
     end
 
-    module InstanceMethods
       # Check to see if this voter voted on the votee or not
       #
       # @param [Hash, Object] options the hash containing the votee, or the votee itself
@@ -89,5 +88,4 @@ module Mongo
       end
     end
     
-  end
 end
