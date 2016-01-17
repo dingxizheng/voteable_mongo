@@ -116,7 +116,6 @@ module Mongo
       end
     end
     
-    module InstanceMethods
       # Make a vote on this votee
       #
       # @param [Hash] options a hash containings:
@@ -200,6 +199,5 @@ module Mongo
       def voters(klass)
         klass.where(:_id => { '$in' => voter_ids })
       end
-    end
   end
 end
